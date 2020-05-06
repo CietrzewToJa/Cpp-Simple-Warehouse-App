@@ -1,5 +1,11 @@
+#include "Item.h"
+#include "Base.h"
+#include <string>
 
 int main() {
+	Base base("druzyna.txt");
+	Item item("Namiot", "dobry", "U Maćka");
 
-	return 0;
+	base.baseUpload();
+	base.saveItem(item);
 }
