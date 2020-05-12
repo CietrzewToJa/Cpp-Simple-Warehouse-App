@@ -3,6 +3,8 @@
 
 #include "Item.h"
 #include <fstream>
+#include <vector>
+#include <algorithm>
 
 class Base {
 
@@ -12,7 +14,7 @@ public:
 
 	void baseOpen(int mode);
 	void baseClose();
-	void baseUpload();
+	void baseUpload(std::string var1, std::string var2, std::string var3);
 	void saveItem(Item item);
 	int getSize();
 
@@ -21,7 +23,7 @@ private:
 	std::string type;
 	std::fstream plik;
 	int size;
-	Item * baseTab = new Item[20];
+	std::vector<Item> baseTab;
 
 	friend class Item;
 };
