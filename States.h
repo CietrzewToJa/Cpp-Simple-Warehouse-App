@@ -3,14 +3,19 @@
 
 #include <string>
 #include <iostream>
+#include <fstream>
 
 class States {
 
 public:
-	void stateWrite(std::string stateHeader);
+	void stateHeader(std::string stateHeader);
+	void stateMenu(std::string fileName);
+	void textOpen(std::string fileName);
+	int optionChoose();
 
 private:
-
+	std::fstream plik;
+	int optionsNumber;
 };
 
 #endif

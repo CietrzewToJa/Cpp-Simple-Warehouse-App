@@ -15,7 +15,8 @@ int Base::getSize() {
 }
 
 //Save base from file to baseTab[] vector
-void Base::baseUpload(std::string var1, std::string var2, std::string var3) {
+void Base::baseUpload() {
+	std::string var1, var2, var3;
 	getSize();
 	baseOpen(2);
 	int i = 0;

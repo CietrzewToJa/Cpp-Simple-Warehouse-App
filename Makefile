@@ -1,12 +1,15 @@
 CC = g++
 EXEC = all
-FILES = main.o item.o base.o states.o openstate.o app.o
+FILES = main.o item.o base.o states.o openstate.o app.o person.o
 
 all: $(FILES)
 	$(CC) $(FILES) -o all
 
 main.o: main.cpp
 	$(CC) main.cpp -c -o main.o
+
+person.o: Person.cpp
+	$(CC) Person.cpp -c -o person.o
 
 item.o: Item.cpp
 	$(CC) Item.cpp -c -o item.o

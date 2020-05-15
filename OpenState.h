@@ -2,6 +2,8 @@
 #define OPENSTATE_H
 
 #include "States.h"
+#include "Person.h"
+
 
 class States;
 
@@ -9,10 +11,11 @@ class OpenState : public States {
 public:
 	OpenState();
 	std::string getHeader();
-	bool logIn();
+	std::string getFileName();
 
 private:
-	std::string stateHeader;
+	std::string stateTitle;
+	std::string fileName;
 };
 
 #endif

@@ -1,9 +1,14 @@
 #include "OpenState.h"
 
 OpenState::OpenState() {
-	stateHeader = "WELCOME!";
+	stateTitle = "WELCOME!";
+	fileName = "openstate.txt";
 }
 
 std::string OpenState::getHeader() {
-	return stateHeader;
+	return stateTitle;
+}
+
+std::string OpenState::getFileName() {
+	return fileName;
 }
