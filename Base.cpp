@@ -14,15 +14,18 @@ int Base::getSize() {
    	return size = numLines/3;
 }
 
-//Save base from file to baseTab[]
+//Save base from file to baseTab[] vector
 void Base::baseUpload() {
+	std::string var1, var2, var3;
 	getSize();
 	baseOpen(2);
 	int i = 0;
 	while(i < size) {
-		getline(plik,baseTab[i].itemName);
-		getline(plik,baseTab[i].itemDescription);
-		getline(plik,baseTab[i].itemPlace);
+		getline(plik,var1);
+		getline(plik,var2);
+		getline(plik,var3);
+		baseTab.push_back(Item(var1,var2,var3));
+		std::cout << baseTab[i].itemName;
 		i++;
 	}
 	baseClose();
