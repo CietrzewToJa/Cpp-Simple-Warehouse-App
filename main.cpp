@@ -1,11 +1,14 @@
 #include "Item.h"
 #include "Base.h"
+#include "OpenState.h"
+#include "App.h"
+
 #include <string>
 
 int main() {
-	Base base("druzyna.txt");
-	Item item("Namiot", "dobry", "U Maćka");
 
-	base.baseUpload();
-	base.saveItem(item);
+	std::string var1, var2, var3;
+
+	App app;
+	app.run();
 }

@@ -3,6 +3,8 @@
 
 #include "Item.h"
 #include <fstream>
+#include <vector>
+#include <algorithm>
 
 class Base {
 
@@ -18,10 +20,10 @@ public:
 
 private:
 	int cuantity;
-	std::string type;
+	std::string type; //name of file with base
 	std::fstream plik;
 	int size;
-	Item * baseTab = new Item[20];
+	std::vector<Item> baseTab;
 
 	friend class Item;
 };
