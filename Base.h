@@ -2,28 +2,34 @@
 #define BASE_H
 
 #include "Item.h"
-#include <fstream>
-#include <vector>
-#include <algorithm>
 
 class Base {
 
 public:
-	Base(std::string type);
-	~Base() = default;
+	Base(std::string baseName);
+	~Base();
 
-	void baseOpen(int mode);
-	void baseClose();
-	void baseUpload();
-	void saveItem(Item item);
-	int getSize();
+	void showBase();
+	void newItem();
+	std::vector<Item>::iterator findItem(std::string itemId);
+	void editItem(std::string itemId);
+	void deleteItem(std::vector<Item>::iterator it);
+	void baseSort();
+	std::vector<Item> baseTab;
+
 
 private:
 	int cuantity;
-	std::string type; //name of file with base
+	std::string baseName; //name of file with base
 	std::fstream plik;
 	int size;
-	std::vector<Item> baseTab;
+
+	void baseUpload();
+	void baseSave();
+	void baseOpen(int mode);
+	void baseClose();
+	int getSize();
+
 
 	friend class Item;
 };

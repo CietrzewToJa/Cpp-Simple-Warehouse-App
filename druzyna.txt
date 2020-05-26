@@ -1,6 +1,40 @@
+O001
 Namiot
-ebebe
-u Maćka
+10 Wysoka, latana
+Magazyn sprzetu
+P001
 Siekiera
-dobry
-U Maćka
+Do zaostrzenia
+Skrzynia druzyny
+P002
+Lopata
+Wzorowy (nowa)
+Magazyn sprzetu
+P003
+Mlotek
+Wzorowy (nowy)
+Magazyn sprzetu
+O002
+Namiot
+10 Niska, wzorowy (nowa)
+Magazyn sprzetu
+B001
+Lampa naftowa
+Stara
+Skrzynia druzyny
+TEMP
+Namiot tur.
+Zielony, Hi-Tec, nowy
+Skrzynia druzyny
+TEMP
+Grabie
+Fiskars, nowe
+Magazyn sprzetu
+TEMP
+Plandeka
+20x20, nowa
+Magazyn sprzetu
+TEMP
+Rzezba
+Lilijka duza
+Skrzynia druzyny

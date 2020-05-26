@@ -8,9 +8,11 @@
 class States {
 
 public:
-	void stateHeader(std::string stateHeader);
-	void stateMenu(std::string fileName);
-	void textOpen(std::string fileName);
+	States();
+	virtual ~States() = 0;
+	virtual void stateHeader(std::string stateHeader);
+	virtual void stateMenu(std::string fileName);
+	virtual void textOpen(std::string fileName);
 	int optionChoose();
 
 private:

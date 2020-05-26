@@ -1,6 +1,14 @@
 #include "States.h"
 #include "Base.h"
 
+States::States() {
+
+}
+
+States::~States() {
+	
+}
+
 //open file
 void States::textOpen(std::string fileName) {
 
@@ -10,7 +18,6 @@ void States::textOpen(std::string fileName) {
 }
 
 void States::stateHeader(std::string stateHeader) {
-	system("clear");
 	for(int i = 0; i < 80; i++)
 		std::cout << "=";
 	std::cout << std::endl;
@@ -23,7 +30,7 @@ void States::stateHeader(std::string stateHeader) {
 
 	for(int i = 0; i < 80; i++)
 		std::cout << "=";
-	std::cout << "\n\n";
+	std::cout << "\n";
 }
 
 void States::stateMenu(std::string fileName) {
@@ -44,10 +51,10 @@ int States::optionChoose() {
 	do {
 		std::cout << "Choose an option: ";
 		std::cin >> answer;
-		if(answer <= 1 || answer > optionsNumber-1) {
+		if(answer < 0 || answer > optionsNumber-1) {
 			std::cout << "Wrong answer, try again! ";
 		}
-	} while(answer <= 1 || answer > optionsNumber-1);
+	} while(answer < 0 || answer > optionsNumber-1);
 
 	return answer;
 }

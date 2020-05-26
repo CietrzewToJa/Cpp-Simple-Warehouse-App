@@ -1,0 +1,8 @@
+
+	(0) Exit
+	(1) Show base
+	(2) Add item
+	(3) Delete item
+	(4) Edit item
+	(5) Find item
+	(6) Sort base

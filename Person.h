@@ -8,6 +8,7 @@
 class Person {
 public:
 	Person(std::string name, std::string surname, std::string password);
+	void logIn(Person person);
 
 private:
 	std::string name;

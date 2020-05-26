@@ -12,6 +12,7 @@ public:
 	OpenState();
 	std::string getHeader();
 	std::string getFileName();
+	void runOption(Person person, int option);
 
 private:
 	std::string stateTitle;
