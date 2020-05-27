@@ -2,32 +2,34 @@
 
 void App::run() {
 
+	openStateRun();
 	baseStateRun();
-	// openStateRun();
-	// open.runOption(option);
 }
 
 void App::openStateRun() {
-	OpenState open;
-	Person user("Maciej", "ebe", "bebe");
+	OpenState state;
+	system("clear");
 
-	open.stateHeader(open.getHeader());
-	open.stateMenu(open.getFileName());
-	int option = open.optionChoose();
-	open.runOption(user, option);
+	state.stateHeader(state.getHeader());
+
+	state.stateMenu(state.getFileName());
+	int option = state.optionChoose();
+	state.runOption(option, ptr);
 }
 
 void App::baseStateRun() {
-	BaseState basestate("druzyna.txt");
+	BaseState state(baseName);
 	system("clear");
 
-	basestate.stateHeader(basestate.getHeader());	
+	state.stateHeader(state.getHeader());	
 
 	while(1) {
-		basestate.stateMenu(basestate.getFileName());
-		int option = basestate.optionChoose();
+		state.stateMenu(state.getFileName());
+		int option = state.optionChoose();
+		if(option == 0)
+			openStateRun();
 		system("clear");
-		basestate.stateHeader(basestate.getHeader());	
-		basestate.runOption(option);
+		state.stateHeader(state.getHeader());	
+		state.runOption(option);
 	}
 }

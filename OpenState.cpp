@@ -1,5 +1,4 @@
 #include "OpenState.h"
-#include "Person.h"
 
 OpenState::OpenState() {
 	stateTitle = "WELCOME!";
@@ -14,17 +13,15 @@ std::string OpenState::getFileName() {
 	return fileName;
 }
 
-void OpenState::runOption(Person person, int option) {
+void OpenState::runOption(int option, std::string *baseName) {
 
 	switch(option) {
 		case 0:
 			exit(0);
 			break;
 		case 1:
-			person.logIn(person);
-			break;
-		case 2: 
-			printf("2\n");
+			std::cout << "Type name of base: ";
+			std::cin >> *baseName;
 			break;
 	};
 }

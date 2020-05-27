@@ -6,7 +6,7 @@ States::States() {
 }
 
 States::~States() {
-	
+
 }
 
 //open file
@@ -42,19 +42,22 @@ void States::stateMenu(std::string fileName) {
 		std::cout << line << std::endl;
 		optionsNumber++;
 	}
+	optionsNumber -= 2;
 	plik.close();
 }
 
 int States::optionChoose() {
 	int answer;
 
-	do {
+	std::cout << "Choose an option: ";
+	std::cin >> answer;
+	while(std::cin.fail() || answer < 0 || answer > optionsNumber) {
+		std::cout << "It must be one of the 'option numbers', try again!" << std::endl;
+		std::cin.clear();
+		std::cin.ignore(256, '\n');
 		std::cout << "Choose an option: ";
 		std::cin >> answer;
-		if(answer < 0 || answer > optionsNumber-1) {
-			std::cout << "Wrong answer, try again! ";
-		}
-	} while(answer < 0 || answer > optionsNumber-1);
-
+	}
+	
 	return answer;
 }

@@ -11,7 +11,6 @@ NAME3 = Base
 NAME4 = BaseState
 NAME5 = Item
 NAME6 = OpenState
-NAME7 = Person
 NAME8 = States
 
 #Analogicznie
@@ -23,7 +22,6 @@ OBJS3 = $(NAME3).o
 OBJS4 = $(NAME4).o
 OBJS5 = $(NAME5).o
 OBJS6 = $(NAME6).o
-OBJS7 = $(NAME7).o
 OBJS8 = $(NAME8).o
 
 #Biblioteka statyczna oraz dzielona
@@ -36,7 +34,7 @@ LIB_STAT = lib$(LIB_NAME).a
 LIB_SHAR = lib$(LIB_NAME).so
 
 #Pliki objektowe wchodzące do biblioteki
-LIB_OBJS = $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS7) $(OBJS8)
+LIB_OBJS = $(OBJS2) $(OBJS3) $(OBJS4) $(OBJS5) $(OBJS6) $(OBJS8)
 
 #Pliki nagłówkowe
 HEADS2 = $(NAME2).h
@@ -44,7 +42,6 @@ HEADS3 = $(NAME3).h
 HEADS4 = $(NAME4).h
 HEADS5 = $(NAME5).h
 HEADS6 = $(NAME6).h
-HEADS7 = $(NAME7).h
 HEADS8 = $(NAME8).h
 
 #Opcje kompilatora i linkera

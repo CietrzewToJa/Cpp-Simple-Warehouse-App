@@ -8,6 +8,10 @@ Item::Item(std::string itemId, std::string itemName, std::string itemDescription
 	this->itemId = itemId;
 }
 
+Item::~Item() {
+	
+}
+
 void Item::getItem() {
 	std::cout << " | " << std::left << std::setw(5) << std::setfill(separator) << itemId;
 	std::cout << " | " << std::left << std::setw(15) << std::setfill(separator) << itemName;

@@ -5,6 +5,10 @@ Base::Base(std::string baseName) {
 	baseUpload();
 }
 
+Base::~Base() {
+	
+}
+
 //Get number of lines divide of 3 => how many elements you got
 int Base::getSize() {
 	int numLines = 0;
@@ -49,6 +53,8 @@ void Base::showBase() {
 void Base::baseOpen(int mode) {
 	//get to the base
 	switch(mode) {
+		case 0:
+			;
 		case 1:
 			//Save to file
 			plik.open(baseName, std::ios::out);
@@ -57,7 +63,7 @@ void Base::baseOpen(int mode) {
 			break;
 		case 2:
 			//Read from file
-			plik.open(baseName, std::ios::in);
+			plik.open(baseName, std::ios::in | std::ios::app);
 			if(!plik.good())
 				std::cout << "Dostep do pliku zostal zabroniony!" << std::endl;
 			break;
@@ -76,6 +82,10 @@ void Base::newItem() {
 	std::cout << "Type name: ";
 	std::cin.ignore(99999, '\n');
 	std::getline(std::cin, var1);
+	while(!sizeCheck(var1, 10)) {
+		std::cout << "Type name: ";
+		std::getline(std::cin, var1);
+	}
 	std::cout << "Type description (1-30 chars): ";
 	std::getline(std::cin, var2);	
 	std::cout << "Type place: ";
@@ -85,6 +95,14 @@ void Base::newItem() {
 
 	baseTab.push_back(Item(var0,var1,var2,var3));
 	baseSave();
+}
+
+bool Base::sizeCheck(std::string str, int limit) {
+	if(str.length() > limit) {
+		std::cout << "Text too long! ";
+		return 0;
+	}
+	return 1;
 }
 
 void Base::editItem(std::string itemId) {
@@ -125,7 +143,7 @@ void Base::deleteItem(std::vector<Item>::iterator it) {
 }
 
 void Base::baseSort() {
-	
+
 	sort(baseTab.begin(), baseTab.end());
 }
 

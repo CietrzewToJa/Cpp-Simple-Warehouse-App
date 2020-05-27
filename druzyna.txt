@@ -38,3 +38,7 @@ TEMP
 Rzezba
 Lilijka duza
 Skrzynia druzyny
+TEMP
+Prysznic sol.
+30l, nowy
+Skrzynia druzyny

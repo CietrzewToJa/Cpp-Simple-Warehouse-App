@@ -1,12 +1,14 @@
 #include "BaseState.h"
 #include "Base.h"
 
-Base base("druzyna.txt");
-
 BaseState::BaseState(std::string baseName) {
 	stateTitle = "BASE SETTINGS";
 	fileName = "basestate.txt";
 	this->baseName = baseName;
+}
+
+BaseState::~BaseState() {
+
 }
 
 std::string BaseState::getHeader() {
@@ -22,10 +24,9 @@ void BaseState::runOption(int option) {
 	std::vector<Item>::iterator it;
 	std::string answer;
 
+	Base base(baseName);
+
 	switch(option) {
-		case 0: //Exit
-			exit(0);
-			break;
 		case 1: //Show base
 			base.showBase();
 			break;
@@ -58,6 +59,7 @@ void BaseState::runOption(int option) {
 			break;
 		case 6: //Sort base
 			base.baseSort();
+			base.showBase();
 			break;
 	};
 }

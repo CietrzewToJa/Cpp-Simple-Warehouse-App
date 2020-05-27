@@ -8,6 +8,7 @@ class States;
 class BaseState : public States {
 public:
 	BaseState(std::string baseName);
+	~BaseState();
 	std::string getHeader();
 	std::string getFileName();
 	void runOption(int option);

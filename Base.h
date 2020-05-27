@@ -7,6 +7,7 @@ class Base {
 
 public:
 	Base(std::string baseName);
+	Base() = delete;
 	~Base();
 
 	void showBase();
@@ -29,6 +30,7 @@ private:
 	void baseOpen(int mode);
 	void baseClose();
 	int getSize();
+	bool sizeCheck(std::string str, int limit);
 
 
 	friend class Item;

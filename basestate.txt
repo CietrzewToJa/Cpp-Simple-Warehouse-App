@@ -1,5 +1,5 @@
 
-	(0) Exit
+	(0) Exit base 
 	(1) Show base
 	(2) Add item
 	(3) Delete item

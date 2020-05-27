@@ -25,7 +25,6 @@ private:
 	std::string itemPlace;
 	char separator = ' ';
 
-
 	friend class Base;
 };
 
