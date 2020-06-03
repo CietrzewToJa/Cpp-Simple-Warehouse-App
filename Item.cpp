@@ -1,5 +1,4 @@
 #include "Item.h"
-#include "Base.h"
 
 Item::Item(std::string itemId, std::string itemName, std::string itemDescription, std::string itemPlace) {
 	this->itemName = itemName;

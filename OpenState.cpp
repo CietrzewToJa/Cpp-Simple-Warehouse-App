@@ -20,7 +20,7 @@ void OpenState::runOption(int option, std::string *baseName) {
 			exit(0);
 			break;
 		case 1:
-			std::cout << "Type name of base: ";
+			std::cout << "Type name of base (f.e. [druzyna.txt]): ";
 			std::cin >> *baseName;
 			break;
 	};

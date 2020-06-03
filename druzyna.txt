@@ -1,44 +1,48 @@
-O001
+0001
 Namiot
 10 Wysoka, latana
 Magazyn sprzetu
-P001
+0002
 Siekiera
 Do zaostrzenia
 Skrzynia druzyny
-P002
+0003
 Lopata
 Wzorowy (nowa)
 Magazyn sprzetu
-P003
+0004
 Mlotek
 Wzorowy (nowy)
 Magazyn sprzetu
-O002
+0005
 Namiot
 10 Niska, wzorowy (nowa)
 Magazyn sprzetu
-B001
+0006
 Lampa naftowa
 Stara
 Skrzynia druzyny
-TEMP
+0007
 Namiot tur.
 Zielony, Hi-Tec, nowy
 Skrzynia druzyny
-TEMP
+0008
 Grabie
 Fiskars, nowe
 Magazyn sprzetu
-TEMP
+0009
 Plandeka
 20x20, nowa
 Magazyn sprzetu
-TEMP
+0010
 Rzezba
 Lilijka duza
 Skrzynia druzyny
-TEMP
+0011
 Prysznic sol.
 30l, nowy
 Skrzynia druzyny
+0012
+Namiot
+10N, dziury
+Magazyn sprzetu

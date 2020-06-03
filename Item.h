@@ -9,6 +9,10 @@
 #include <algorithm>
 #include <cstdio>
 
+// #include "Base.h"
+
+// class Base;
+
 class Item {
 
 public:
@@ -16,10 +20,9 @@ public:
 	~Item();
 	void getItem();
 	bool operator<(const Item& r) const;
-
+	std::string itemId;
 
 private:
-	std::string itemId;
 	std::string itemName;
 	std::string itemDescription;
 	std::string itemPlace;

@@ -31,6 +31,7 @@ private:
 	void baseClose();
 	int getSize();
 	bool sizeCheck(std::string str, int limit);
+	std::string setId();
 
 
 	friend class Item;

@@ -53,8 +53,6 @@ void Base::showBase() {
 void Base::baseOpen(int mode) {
 	//get to the base
 	switch(mode) {
-		case 0:
-			;
 		case 1:
 			//Save to file
 			plik.open(baseName, std::ios::out);
@@ -79,19 +77,27 @@ void Base::baseClose() {
 void Base::newItem() {
 	std::string var0, var1, var2, var3, a, b;
 
-	std::cout << "Type name: ";
+	std::cout << "Type name: (1-15 chars): ";
 	std::cin.ignore(99999, '\n');
 	std::getline(std::cin, var1);
-	while(!sizeCheck(var1, 10)) {
+	while(!sizeCheck(var1, 15)) {
 		std::cout << "Type name: ";
 		std::getline(std::cin, var1);
 	}
 	std::cout << "Type description (1-30 chars): ";
 	std::getline(std::cin, var2);	
+	while(!sizeCheck(var2, 30)) {
+		std::cout << "Type name: ";
+		std::getline(std::cin, var1);
+	}
 	std::cout << "Type place: ";
-	std::getline(std::cin, var3);	
+	std::getline(std::cin, var3);
+	while(!sizeCheck(var3, 30)) {
+		std::cout << "Type name: ";
+		std::getline(std::cin, var1);
+	}
 
-	var0 = "TEMP";
+	var0 = setId();
 
 	baseTab.push_back(Item(var0,var1,var2,var3));
 	baseSave();
@@ -113,10 +119,22 @@ void Base::editItem(std::string itemId) {
 	std::cout << std::endl << "Type new name: ";
 	std::cin.ignore(99999, '\n');
 	std::getline(std::cin, (*it).itemName);
+	while(!sizeCheck((*it).itemName, 15)) {
+		std::cout << "Type new name again: ";
+		std::getline(std::cin, (*it).itemName);
+	}
 	std::cout << "Type new description: ";
 	std::getline(std::cin, (*it).itemDescription);
+	while(!sizeCheck((*it).itemDescription, 30)) {
+		std::cout << "Type new description again: ";
+		std::getline(std::cin, (*it).itemName);
+	}
 	std::cout << "Type new place: ";
 	std::getline(std::cin, (*it).itemPlace);
+	while(!sizeCheck((*it).itemPlace, 15)) {
+		std::cout << "Type new place again: ";
+		std::getline(std::cin, (*it).itemName);
+	}
 
 	baseSave();
 }
@@ -140,6 +158,7 @@ std::vector<Item>::iterator Base::findItem(std::string itemId) {
 void Base::deleteItem(std::vector<Item>::iterator it) {
 
 	baseTab.erase(it);
+	baseSave();
 }
 
 void Base::baseSort() {
@@ -163,4 +182,19 @@ void Base::baseSave() {
 		plik << '\n';
 	}
 	baseClose();
+}
+
+std::string Base::setId() {
+	std::vector<Item>::iterator it;
+	int Id = 2;
+	std::string Id2 = "00";
+
+	it = baseTab.end()-1;
+	// std::cout << "tu";
+	// std::cout << (*it).itemId;
+	Id = std::stoi((*it).itemId);
+	Id++;
+	Id2 += std::to_string(Id);
+
+	return Id2;
 }

@@ -1,5 +1,5 @@
 #include "BaseState.h"
-#include "Base.h"
+// #include "Base.h"
 
 BaseState::BaseState(std::string baseName) {
 	stateTitle = "BASE SETTINGS";
@@ -9,6 +9,19 @@ BaseState::BaseState(std::string baseName) {
 
 BaseState::~BaseState() {
 
+}
+
+std::string setId(Base base) {
+	int Id;
+	std::string returnId;
+  	std::vector<Item>::iterator it;
+
+	it = base.baseTab.end();
+	Id = std::stoi((*it).itemId);
+	Id++;
+	returnId = std::to_string(Id);
+
+	return returnId;
 }
 
 std::string BaseState::getHeader() {
