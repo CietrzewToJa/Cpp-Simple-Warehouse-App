@@ -2,6 +2,7 @@
 Maciej Knapik
 
 Project created to pass C++ Course.
+
 ![image](https://user-images.githubusercontent.com/64318229/111063316-2089a680-84ae-11eb-81d2-6ab520ece34b.png)
 _________________________________________________________
 
